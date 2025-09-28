@@ -1,0 +1,6 @@
+@AuctionMinimalAPI_HostAddress = http://localhost:5280
+
+GET {{AuctionMinimalAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
