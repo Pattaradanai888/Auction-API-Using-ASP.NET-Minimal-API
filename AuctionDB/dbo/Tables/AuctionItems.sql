@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[AuctionItems]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[Title] NVARCHAR(256) NOT NULL,
+	[StartingPrice] DECIMAL(18, 2) NOT NULL,
+	[CurrentPrice] DECIMAL(18, 2) NOT NULL,
+	[SellerId] INT NOT NULL,
+	[IsActive] BIT NOT NULL DEFAULT 1,
+	[EndDate] DATETIME2 NOT NULL,
+	[CreatedAt] DATETIME2 NOT NULL DEFAULT GETDATE(),
+	FOREIGN KEY (SellerId) REFERENCES [User](Id)
+
+)
