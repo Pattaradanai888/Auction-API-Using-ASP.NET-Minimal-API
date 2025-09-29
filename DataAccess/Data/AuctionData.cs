@@ -58,4 +58,7 @@ public class AuctionData : IAuctionData
 
     public Task DeleteAuction(int id) =>
         _db.SaveData("dbo.spAuction_Delete", new { Id = id });
+
+    public Task UpdateAuctionCurrentPrice(int auctionId, decimal newPrice) =>
+        _db.SaveData("dbo.spAuction_UpdatePrice", new { Id = auctionId, CurrentPrice = newPrice });
 }

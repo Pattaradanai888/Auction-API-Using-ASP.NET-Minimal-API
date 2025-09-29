@@ -131,7 +131,7 @@ GO
 DECLARE @itemId INT = 1;
 WHILE @itemId <= 50
 BEGIN
-    DECLARE @numBids INT = (SELECT FLOOR(RAND() * 5) + 2); -- Random number of bids between 2 and 6
+    DECLARE @numBids INT =  (SELECT FLOOR(RAND() * 5) + 2); -- Random number of bids between 2 and 6
     DECLARE @bidCounter INT = 1;
     DECLARE @sellerId INT = (SELECT SellerId FROM dbo.AuctionItems WHERE Id = @itemId);
 

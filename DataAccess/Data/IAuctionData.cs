@@ -11,4 +11,5 @@ public interface IAuctionData
     Task<IEnumerable<AuctionModel>> GetActiveAuctionsBySeller(int sellerId, bool activeOnly, string sortBy);
     Task InsertAuction(AuctionModel auction);
     Task UpdateAuction(AuctionModel auction);
+    Task UpdateAuctionCurrentPrice(int auctionId, decimal newPrice);
 }

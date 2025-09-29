@@ -10,6 +10,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
 builder.Services.AddSingleton<IUserData, UserData>();
 builder.Services.AddSingleton<IAuctionData, AuctionData>();
+builder.Services.AddSingleton<IBidData, BidData>();
 
 var app = builder.Build();
 
@@ -27,6 +28,5 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.ConfigureApi();
-
 
 app.Run();

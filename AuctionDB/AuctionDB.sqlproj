@@ -75,6 +75,12 @@
     <Build Include="dbo\StoredProcedures\spAuction_GetBySeller.sql" />
     <Build Include="dbo\StoredProcedures\spAuction_Insert.sql" />
     <Build Include="dbo\StoredProcedures\spAuction_Update.sql" />
+    <Build Include="dbo\StoredProcedures\spBid_GetByUser.sql" />
+    <Build Include="dbo\StoredProcedures\spBid_GetHighestByAuction.sql" />
+    <Build Include="dbo\StoredProcedures\spBid_Insert.sql" />
+    <Build Include="dbo\StoredProcedures\spBid_UpdateWinning.sql" />
+    <Build Include="dbo\StoredProcedures\spBid_GetByAuction.sql" />
+    <Build Include="dbo\StoredProcedures\spAuction_UpdatePrice.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment.sql" />
