@@ -17,7 +17,7 @@ public class UserData : IUserData
         _db.LoadData<UserModel, dynamic>("dbo.spUser_GetAll", new { });
 
     public Task<UserModel?> GetUserById(int id) =>
-        _db.LoadData<UserModel, dynamic>("dbo.spUser_GetById", new { Id = id })
+        _db.LoadData<UserModel, dynamic>("dbo.spUser_Get", new { Id = id })
         .ContinueWith(t => t.Result.FirstOrDefault());
 
     public Task InsertUser(UserModel user) =>
